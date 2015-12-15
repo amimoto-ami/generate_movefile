@@ -3,6 +3,7 @@
 cd /var/www/vhosts/$(curl -L http://169.254.169.254/latest/meta-data/instance-id)
 
 php -r 'require "wp-config.php";
+echo "\n";
 echo "default:\n";
 echo "  vhost: " . home_url() . "\n";
 echo "  wordpress_path: " . getcwd() . "\n";
